@@ -23,6 +23,7 @@ layout: default
 {% else %}
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
+  {% if post.display %}
   <div class="list-post">
     {% if post.link %}
     <a href="{{ post.link }}">
@@ -41,6 +42,7 @@ layout: default
       </div>
       {% endif %}
     </a>
+  {% endif %}
 
 
   </div>
